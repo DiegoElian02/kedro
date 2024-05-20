@@ -1,10 +1,11 @@
 import pandas as pd
 
 def process_dates_and_ids(df):
-    df['date'] = pd.to_datetime(df['date'])
+    df['started_at'] = pd.to_datetime(df['started_at'])
+    df['ended_at'] = pd.to_datetime(df['ended_at'])
     df['start_station_id'] = df['start_station_id'].astype('category')
     df['end_station_id'] = df['end_station_id'].astype('category')
-    df['duration_seconds'] = (df['end_time'] - df['start_time']).dt.total_seconds()
+    df['duration_seconds'] = (df['ended_at'] - df['started_at']).dt.total_seconds()
     return df
 
 def split_datasets(df):

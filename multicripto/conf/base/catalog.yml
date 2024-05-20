@@ -1,3 +1,27 @@
 rawdata:
-  type: pandas.CSVDataSet
+  type: pandas.CSVDataset
   filepath: data/01_raw/data_raw.csv
+
+processed_data:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/processed_data.csv
+
+dataset1:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/dataset1.csv
+
+dataset2:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/dataset2.csv
+
+dataset1_processed:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/dataset1_processed.csv
+
+dataset2_processed:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/dataset2_processed.csv
+
+final_stats:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/final_stats.csv
